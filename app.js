@@ -141,10 +141,9 @@ function VolumeChoice() {
         document.getElementById('Cube-Edge').name = ""
         document.getElementById('Prism-Base').name = ""
         document.getElementById('Prism-Height').name = ""
-        document.getElementById('TriangularPrism-a-Base').name = ""
-        document.getElementById('TriangularPrism-b-Base').name = ""
-        document.getElementById('TriangularPrism-c-Base').name = ""
+        document.getElementById('TriangularPrism-Base').name = ""
         document.getElementById('TriangularPrism-Height').name = ""
+        document.getElementById('TriangularPrism-Length').name = ""
     }
 
     else if (choice == 2) {
@@ -164,10 +163,9 @@ function VolumeChoice() {
         document.getElementById('Cube-Edge').name = ""
         document.getElementById('Prism-Base').name = ""
         document.getElementById('Prism-Height').name = ""
-        document.getElementById('TriangularPrism-a-Base').name = ""
-        document.getElementById('TriangularPrism-b-Base').name = ""
-        document.getElementById('TriangularPrism-c-Base').name = ""
+        document.getElementById('TriangularPrism-Base').name = ""
         document.getElementById('TriangularPrism-Height').name = ""
+        document.getElementById('TriangularPrism-Length').name = ""
     }
 
     else if (choice == 3) {
@@ -187,10 +185,9 @@ function VolumeChoice() {
         document.getElementById('Cube-Edge').name = ""
         document.getElementById('Prism-Base').name = ""
         document.getElementById('Prism-Height').name = ""
-        document.getElementById('TriangularPrism-a-Base').name = ""
-        document.getElementById('TriangularPrism-b-Base').name = ""
-        document.getElementById('TriangularPrism-c-Base').name = ""
+        document.getElementById('TriangularPrism-Base').name = ""
         document.getElementById('TriangularPrism-Height').name = ""
+        document.getElementById('TriangularPrism-Length').name = ""
     }
 
     else if (choice == 4) {
@@ -210,10 +207,9 @@ function VolumeChoice() {
         document.getElementById('Cube-Edge').name = "Cube-Edge"
         document.getElementById('Prism-Base').name = ""
         document.getElementById('Prism-Height').name = ""
-        document.getElementById('TriangularPrism-a-Base').name = ""
-        document.getElementById('TriangularPrism-b-Base').name = ""
-        document.getElementById('TriangularPrism-c-Base').name = ""
+        document.getElementById('TriangularPrism-Base').name = ""
         document.getElementById('TriangularPrism-Height').name = ""
+        document.getElementById('TriangularPrism-Length').name = ""
     }
 
     else if (choice == 5) {
@@ -233,10 +229,9 @@ function VolumeChoice() {
         document.getElementById('Cube-Edge').name = ""
         document.getElementById('Prism-Base').name = "Prism-Base"
         document.getElementById('Prism-Height').name = "Prism-Height"
-        document.getElementById('TriangularPrism-a-Base').name = ""
-        document.getElementById('TriangularPrism-b-Base').name = ""
-        document.getElementById('TriangularPrism-c-Base').name = ""
+        document.getElementById('TriangularPrism-Base').name = ""
         document.getElementById('TriangularPrism-Height').name = ""
+        document.getElementById('TriangularPrism-Length').name = ""
     }
 
     else if (choice == 6) {
@@ -256,10 +251,9 @@ function VolumeChoice() {
         document.getElementById('Cube-Edge').name = ""
         document.getElementById('Prism-Base').name = ""
         document.getElementById('Prism-Height').name = ""
-        document.getElementById('TriangularPrism-a-Base').name = "TriangularPrism-a-Base"
-        document.getElementById('TriangularPrism-b-Base').name = "TriangularPrism-b-Base"
-        document.getElementById('TriangularPrism-c-Base').name = "TriangularPrism-c-Base"
+        document.getElementById('TriangularPrism-Base').name = "TriangularPrism-Base"
         document.getElementById('TriangularPrism-Height').name = "TriangularPrism-Height"
+        document.getElementById('TriangularPrism-Length').name = "TriangularPrism-Length"
     }
 
     else if (choice == 0) {
@@ -282,6 +276,8 @@ function VolumeChoice() {
         document.getElementById('TriangularPrism-a-Base').name = ""
         document.getElementById('TriangularPrism-b-Base').name = ""
         document.getElementById('TriangularPrism-c-Base').name = ""
+        document.getElementById('TriangularPrism-Base').name = ""
         document.getElementById('TriangularPrism-Height').name = ""
+        document.getElementById('TriangularPrism-Length').name = ""
     }
 }

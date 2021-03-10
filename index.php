@@ -8,7 +8,6 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">  
-        <link rel="stylesheet" href="styles.css">
     </head>
         
     <body style="background-color: #ececec">
@@ -179,7 +178,7 @@
 
                         <!-- Cylinder -->
                         <div id="CylinderDiv" style="display: none;">
-                            <form action="post">
+                            <form method="post">
                                 <div class="input-group mb-3">
                                     <input type="text" class="form-control" id="Cylinder-Radius" name="" aria-describedby="button-volume-Cylinder" placeholder="Enter value: " required/>
                                     <span class="input-group-text">Radius</span>
@@ -242,14 +241,12 @@
                         <div id="TriangularPrismDiv" style="display: none;">
                             <form method="post">
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" id="TriangularPrism-a-Base" aria-describedby="button-volume-TriangularPrism" name="" placeholder="Enter value: " required/>
-                                    <span class="input-group-text"><b>a</b> - Base side</span>
-                                    <input type="text" class="form-control" id="TriangularPrism-b-Base" aria-describedby="button-volume-TriangularPrism" name="" placeholder="Enter value: " required/>
-                                    <span class="input-group-text"><b>b</b> - Base side</span>
-                                    <input type="text" class="form-control" id="TriangularPrism-c-Base" aria-describedby="button-volume-TriangularPrism" name="" placeholder="Enter value: " required/>
-                                    <span class="input-group-text"><b>c</b> - Base side</span>
+                                    <input type="text" class="form-control" id="TriangularPrism-Base" aria-describedby="button-volume-TriangularPrism" name="" placeholder="Enter value: " required/>
+                                    <span class="input-group-text">Base</span>
                                     <input type="text" class="form-control" id="TriangularPrism-Height" aria-describedby="button-volume-TriangularPrism" name="" placeholder="Enter value: " required/>
                                     <span class="input-group-text">Height</span>
+                                    <input type="text" class="form-control" id="TriangularPrism-Length" aria-describedby="button-volume-TriangularPrism" name="" placeholder="Enter value: " required/>
+                                    <span class="input-group-text">Length</span>
                                     <button class="btn btn-outline-secondary" id="button-volume-TriangularPrism" type="submit">Submit</button>
                                 </div>
                             </form>
@@ -360,7 +357,9 @@
                     <div class="modal-body">
                         <div class="alert alert-primary" role="alert">
                             <h4 class="alert-heading">
-                                    
+                                <?php
+                                    Volume_run()
+                                ?>
                             </h4>
                         </div>
                     </div>

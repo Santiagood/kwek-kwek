@@ -129,91 +129,155 @@
     // ** Miles Per Hour**
     function MilesPerHourToKilometerPerHour($speed) {
         $speed = $speed * 1.609;
-        echo $speed . " Kilometer per hour";
+        echo "The converted speed is: " . $speed . " Kilometer per hour";
     }
 
     function MilesPerHourToMeterPerSecond($speed) {
         $speed = $speed / 2.237;
-        echo $speed . " Meters per second";
+        echo "The converted speed is: " . $speed . " Meters per second";
     }
 
     function MilesPerHourToFootPerSecond($speed) {
         $speed = $speed * 1.467;
-        echo $speed . " Foot per second";
+        echo "The converted speed is: " . $speed . " Foot per second";
     }
 
     function MilesPerHourToMilesPerHour($speed) {
         $speed = $speed * 1;
-        echo $speed . " Miles per hour";
+        echo "The converted speed is: " . $speed . " Miles per hour";
     }
 
 
     // ** Foot Per Second**
     function FootPerSecondToMilesPerHour($speed) {
         $speed = $speed / 1.467;
-        echo $speed . " Miles per hour";
+        echo "The converted speed is: " . $speed . " Miles per hour";
     }
 
     function FootPerSecondToMeterPerSecond($speed) {
         $speed = $speed / 3.281;
-        echo $speed . " Meters per second";
+        echo "The converted speed is: " . $speed . " Meters per second";
     }
 
     function FootPerSecondToKilometerPerHour($speed) {
         $speed = $speed / 1.097;
-        echo $speed . " Kilometers per hour";
+        echo "The converted speed is: " . $speed . " Kilometers per hour";
     }
 
     function FootPerSecondToFootPerSecond($speed) {
         $speed = $speed * 1;
-        echo $speed . " Foot per second";
+        echo "The converted speed is: " . $speed . " Foot per second";
     }
 
     // ** Meter Per Second **
     function MeterPerSecondToMilesPerHour($speed) {
         $speed = $speed * 2.237;
-        echo $speed . " Miles per hour";
+        echo "The converted speed is: " . $speed . " Miles per hour";
     }
 
     function MeterPerSecondToFootPerSecond($speed) {
         $speed = $speed * 3.281;
-        echo $speed . " Foot per second";
+        echo "The converted speed is: " . $speed . " Foot per second";
     }
 
     function MeterPerSecondToKilometerPerHour($speed) {
         $speed = $speed * 3.6;
-        echo $speed . " Kilometers per hour";
+        echo "The converted speed is: " . $speed . " Kilometers per hour";
     }
 
     function MeterPerSecondToMeterPerSecond($speed) {
         $speed = $speed * 1;
-        echo $speed . " Meters per second";
+        echo "The converted speed is: " . $speed . " Meters per second";
     }
 
     // ** Kilometer Per Hour **
     function KilometerPerHourToMilesPerHour($speed) {
         $speed = $speed / 1.609;
-        echo $speed . " Miles per hour";
+        echo "The converted speed is: " . $speed . " Miles per hour";
     }
 
     function KilometerPerHourToFootPerSecond($speed) {
         $speed = $speed / 1.097;
-        echo $speed . " Foot per second";
+        echo "The converted speed is: " . $speed . " Foot per second";
     }
 
     function KilometerPerHourToMeterPerSecond($speed) {
         $speed = $speed / 3.6;
-        echo $speed . " Meters per second";
+        echo "The converted speed is: " . $speed . " Meters per second";
     }
     
     function KilometerPerHourToKilometerPerHour($speed) {
         $speed = $speed * 1;
-        echo $speed . " Kilometers per hour";
+        echo "The converted speed is: " . $speed . " Kilometers per hour";
     }
 
     //Volume
-    
+    function Volume_run() {
+        if (isset($_POST['Cylinder-Radius']) && isset($_POST['Cylinder-Height'])) {
+            $radius = $_POST['Cylinder-Radius'];
+            $height = $_POST['Cylinder-Height'];
+            Cylinder($radius, $height);
+        }
 
+        if (isset($_POST['Sphere-Radius'])) {
+            $radius = $_POST['Sphere-Radius'];
+            Sphere($radius);
+        }
+
+        if (isset($_POST['Cone-Radius']) && isset($_POST['Cone-Height'])) {
+            $radius = $_POST['Cone-Radius'];
+            $height = $_POST['Cone-Height'];
+            Cone($radius, $height);
+        }
+
+        if (isset($_POST['Cube-Edge'])) {
+            $edge = $_POST['Cube-Edge'];
+            Cube($edge);
+        }
+
+        if (isset($_POST['Prism-Base']) && isset($_POST['Prism-Height'])) {
+            $base = $_POST['Prism-Base'];
+            $height = $_POST['Prism-Height'];
+            Prism($base, $height);
+        }
+
+        if (isset($_POST['TriangularPrism-Base']) && isset($_POST['TriangularPrism-Height']) && isset($_POST['TriangularPrism-Length'])) {
+            $base = $_POST['TriangularPrism-Base'];
+            $height = $_POST['TriangularPrism-Height'];
+            $length = $_POST['TriangularPrism-Length'];
+            TriangularPrism($base, $height, $length);
+        }
+    }
+
+    function Cylinder($radius, $height) {
+        $volume = 3.1415*((($radius)*($radius))*$height);
+        echo "The volume of the cylinder is: " . $volume . " cm3";
+    }
+
+    function Sphere($radius) {
+        $volume = ((4/3)*(3.1415*(($radius)*($radius)*($radius))));
+        echo "The volume of the sphere is: " . $volume . " m2";
+    }
+
+    function Cone($radius, $height) {
+        $volume = (3.1415 * (($radius) * ($height)));
+        echo "The volume of the cone is: " . $volume . " cm2";
+    }
+
+    function Cube($edge) {
+        $volume = (($edge)*($edge)*($edge));
+        echo "The volume of the cube is: " . $volume . " in3";
+    }
+
+    function Prism($base, $height) {
+        $volume = (($base) * ($height));
+        echo "The volume of the prism is: " . $volume . " cm3";
+    }
+
+    function TriangularPrism($base, $height, $length) {
+        $volume = (($base)*($height)*($length))/2;
+        echo "The volume of the triangular prism is: " . $volume . " cm3";
+    }
     
     //Payroll
 ?>
