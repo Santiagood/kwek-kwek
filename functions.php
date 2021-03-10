@@ -280,4 +280,52 @@
     }
     
     //Payroll
+
+    function outputJob($position) {
+        echo "<input type='text' class='form-control' id='output-position' value='" . $position . "' disabled>";
+    }
+
+    function outputName($name) {
+        echo "<input type='text' class='form-control' id='output-name' value='" . $name . "' disabled>";
+    }
+
+    function outputAge($age) {
+        echo "<input type='text' class='form-control' id='output-age' value='" . $age . "' disabled>";
+    }
+
+    function outputID($id) {
+        echo "<input type='text' class='form-control' id='output-ID' value='" . $id ." @ IT-205". "' disabled>";
+    }
+    
+    function outputGross($gross) {
+        echo "<input type='text' class='form-control' id='output-gross-salary' value='" . $gross . "' disabled>";
+    }
+
+    function outputPhilhealth($philhealth) {
+        echo "<input type='text' class='form-control' id='output-philhealth' value='" . $philhealth . "' disabled>";
+    }
+
+    function outputPagibig($pagibig) {
+        echo "<input type='text' class='form-control' id='output-pagibig' value='" . $pagibig . "' disabled>";
+    }
+
+    function outputSSS($sss) {
+        echo "<input type='text' class='form-control' id='output-sss' value='" . $sss . "' disabled>";
+    }
+
+    function outputTax($tax) {
+        echo "<input type='text' class='form-control' id='output-tax' value='" . $tax . "' disabled>";
+    }
+
+    function outputTotalDeduction($totaldeduction) {
+        echo "<input type='text' class='form-control' id='output-total-deduction' value='" . $totaldeduction . "' disabled>";
+    }
+
+    function outputSalary($netsalary) {
+        echo "<input type='text' class='form-control' id='output-net-salary' value='" . $netsalary . "' disabled>";
+    }
+
+    function outputContractUntil($contractuntil) {
+        echo "<input type='text' class='form-control' id='output-net-salary' value='" . $contractuntil . "' disabled>";
+    }
 ?>

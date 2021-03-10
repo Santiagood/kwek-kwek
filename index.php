@@ -22,7 +22,7 @@
             <div class="card">
                 <div class="card-header" id="header-card-temperature">
                     <h2 class="mb-0">
-                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#card-temperature" aria-expanded="false" aria-controls="card-temperature">
+                        <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#card-temperature" aria-expanded="false" aria-controls="card-temperature">
                             Temperature Convertion
                         </button>
                     </h2>
@@ -50,7 +50,7 @@
             <div class="card">
                 <div class="card-header" id="header-card-BMI">
                     <h2 class="mb-0">
-                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#card-BMI" aria-expanded="false" aria-controls="card-BMI">
+                        <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#card-BMI" aria-expanded="false" aria-controls="card-BMI">
                             Compute BMI
                         </button>
                     </h2>
@@ -117,7 +117,7 @@
             <div class="card">
                 <div class="card-header" id="header-card-distance">
                     <h2 class="mb-0">
-                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#card-distance" aria-expanded="false" aria-controls="card-distance">
+                        <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#card-distance" aria-expanded="false" aria-controls="card-distance">
                             Distance Conversion
                         </button>
                     </h2>
@@ -158,7 +158,7 @@
             <div class="card">
                 <div class="card-header" id="header-card-volume">
                     <h2 class="mb-0">
-                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#card-volume" aria-expanded="false" aria-controls="card-volume">
+                        <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#card-volume" aria-expanded="false" aria-controls="card-volume">
                             Volume Conversion
                         </button>
                     </h2>
@@ -261,14 +261,90 @@
             <div class="card">
                 <div class="card-header" id="header-card-payroll">
                     <h2 class="mb-0">
-                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#card-payroll" aria-expanded="false" aria-controls="card-payroll">
+                        <button class="btn btn-block text-left collapsed" type="button" data-toggle="collapse" data-target="#card-payroll" aria-expanded="false" aria-controls="card-payroll">
                             Payroll
                         </button>
                     </h2>
                 </div>
                 <div id="card-payroll" class="collapse" aria-labelledby="header-card-payroll" data-parent="#accordionHead">
                     <div class="card-body">
-                        the form goes here! <br><br>
+                        <form method="post">
+                            <div class="container">
+                                <!-- age and name-->
+                                <div class="row">
+                                    <div class="col" id="job-position">
+                                        <label for="select-job-position" class="form-label">Job Position</label>
+                                        <select name="select-job-position" class="form-select" id="select-job-position" onchange="PositionToRate()">
+                                            <option value="0" selected>Job Position: </option>
+                                            <option value="System Administrator">System Administrator</option>
+                                            <option value="Database Administrator">Database Administrator</option>
+                                            <option value="Senior Developer">Senior Developer</option>
+                                            <option value="Junior Developer">Junior Developer</option>
+                                        </select>
+                                    </div>
+                                    <div class="col" id="employee-id">
+                                        <label for="employeeID" class="form-label">Employee ID</label>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" id="employeeID" name="employeeID" placeholder="Employee ID: ">
+                                            <span class="input-group-text">@ IT-205</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- job position and employee id -->
+                                <div class="row">
+                                    <div class="col" id="employee-name">
+                                        <label for="employeeName" class="form-label">Employee Name</label>
+                                        <input type="text" class="form-control" id="employeeName" name="employeeName" placeholder="Lastname, Firstname, Mi : ">
+                                    </div>
+                                    <div class="col" id="employee-age">
+                                        <label for="employeeAge" class="form-label">Employee Age</label>
+                                        <div class="input-group mb-3">
+                                            <input type="number" class="form-control" id="employeeAge" name="employeeAge" placeholder="Age: ">
+                                            <span class="input-group-text">years old</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- year employeed and year until -->
+                                <div class="row">
+                                    <div class="col" id="year-employeed">
+                                        <label for="yearEmployeed" class="form-label">Year Employeed</label>
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text">Year</span>
+                                            <input type="text" class="form-control" id="year-employeed-show" name="year-employeed-show" value="" placeholder="Year Started" readonly>
+                                            <input type="range" class="form-range" min="2010" name="yearEmployeed" max="2021" id="yearEmployeed" oninput="sliderShowYear()">
+                                        </div>
+                                    </div>
+                                    <div class="col" id="contract-until">
+                                        <label for="contractUntil" class="form-label">Contract Until</label>
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text">Year</span>
+                                            <input type="text" class="form-control" id="contractUntil" name="contractUntil" value="" placeholder="Year Ended" readonly>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- rate per hour and number of hours a day and submit -->
+                                <div class="row">
+                                    <div class="col" id="rate-per-hour">
+                                        <label for="ratePerHour" class="form-label">Rate Per Hour</label>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" id="ratePerHour" name="ratePerHour" value="" placeholder="Rate Per Hour" readonly>
+                                        </div>
+                                    </div>
+                                    <div class="col" id="hours-per-day">
+                                        <label for="yearEmployeed" class="form-label">Number Of Hours a Day</label>
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" id="numberOfHoursADay" name="numberOfHoursADay" value="" placeholder="Worked for: " disabled>
+                                            <span class="input-group-text">Hours a day</span>
+                                            <input type="range" class="form-range" min="6" name="sliderHours" max="12" id="sliderHours" oninput="sliderShowHours()">
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn btn-outline-secondary" id="button-submit-payroll" style="float: right;" type="submit">Submit</button>
+                            </div>                            
+                        </form>
                         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#buttonPayroll">Show Results</button>
                     </div>
                 </div>
@@ -381,7 +457,122 @@
                     <div class="modal-body">
                         <div class="alert alert-primary" role="alert">
                             <h4 class="alert-heading">
-                                    
+                            <?php 
+                                if (isset($_POST['select-job-position'])) {
+                                    $position = $_POST['select-job-position'];  
+                                }
+
+                                if (isset($_POST['employeeID'])) {
+                                    $id = $_POST['employeeID'];  
+                                }
+
+                                if (isset($_POST['employeeName'])) {
+                                    $name = $_POST['employeeName'];
+                                }
+                                
+                                if (isset($_POST['contractUntil'])) {
+                                    $contractuntil = $_POST['contractUntil'];
+                                }
+
+                                if (isset($_POST['employeeAge'])) {
+                                    $age = $_POST['employeeAge'];
+                                }
+
+                                if (isset($_POST['ratePerHour'])) {
+                                    $rateperhour = $_POST['ratePerHour'];
+                                }
+                                
+                                if (isset($_POST['sliderHours'])) {
+                                    $hoursperday = $_POST['sliderHours'];
+                                }
+
+                                $gross = $rateperhour * $hoursperday;
+                                $philhealth = $gross * 0.02;
+                                $pagibig = $gross * 0.03;
+                                $sss = $gross * 0.03;
+                                $tax = $gross * 0.10;
+                                $totaldeduction = $philhealth + $pagibig + $sss + $tax;
+                                $netsalary = $gross - $totaldeduction;
+                            ?>
+                            
+                            <div class="container">
+                                <div class="row row-cols-auto">
+                                    <div class="col">
+                                        <label for="output-name" class="form-label">Name: </label>
+                                        <?php
+                                            outputName($name);
+                                        ?>
+                                    </div>
+                                    <div class="col">
+                                        <label for="output-age" class="form-label">Age: </label>
+                                        <?php
+                                            outputAge($age);
+                                        ?>
+                                    </div>
+                                    <div class="col">
+                                        <label for="output-position" class="form-label">Job Position: </label>
+                                        <?php
+                                            outputJob($position);
+                                        ?>
+                                    </div>
+
+                                    <div class="col">
+                                        <label for="output-position" class="form-label">Contract Until: </label>
+                                        <?php
+                                            outputContractUntil($contractuntil);
+                                        ?>
+                                    </div>
+
+                                    <div class="col">
+                                        <label for="output-ID" class="form-label">Employee ID</label>
+                                        <?php
+                                            outputID($id);
+                                        ?>
+                                    </div>
+                                    <div class="col">
+                                        <label for="output-gross-salary" class="form-label">Gross Salary</label>
+                                        <?php
+                                            outputGross($gross);
+                                        ?>
+                                    </div>
+                                    <div class="col">
+                                        <label for="output-philhealth" class="form-label">Philhealth</label>
+                                        <?php
+                                            outputPhilhealth($philhealth);
+                                        ?>
+                                    </div>
+                                    <div class="col">
+                                        <label for="output-pagibig" class="form-label">Pagibig</label>
+                                        <?php
+                                            outputPagibig($pagibig);
+                                        ?>
+                                    </div>
+                                    <div class="col">
+                                        <label for="output-sss" class="form-label">SSS</label>
+                                        <?php
+                                            outputSSS($sss);
+                                        ?>
+                                    </div>
+                                    <div class="col">
+                                        <label for="output-tax" class="form-label">Tax</label>
+                                        <?php
+                                            outputTax($tax);
+                                        ?>
+                                    </div>
+                                    <div class="col">
+                                        <label for="output-total-deduction" class="form-label">Total Deduction</label>
+                                        <?php
+                                            outputTotalDeduction($totaldeduction);
+                                        ?>
+                                    </div>
+                                    <div class="col">
+                                        <label for="output-net-salary" class="form-label">Net Salary</label>
+                                        <?php
+                                            outputSalary($netsalary);
+                                        ?>
+                                    </div>
+                                </div>
+                            </div>
                             </h4>
                         </div>
                     </div>

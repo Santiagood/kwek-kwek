@@ -281,3 +281,36 @@ function VolumeChoice() {
         document.getElementById('TriangularPrism-Length').name = ""
     }
 }
+
+
+function sliderShowYear() {
+    document.getElementById('year-employeed-show').value = parseInt(document.getElementById('yearEmployeed').value)
+    document.getElementById('contractUntil').value = (parseInt(document.getElementById('yearEmployeed').value) + parseInt("7"))
+}
+
+function sliderShowHours() {
+    document.getElementById('numberOfHoursADay').value = parseInt(document.getElementById('sliderHours').value)
+}
+
+function PositionToRate() {
+    let choice = document.getElementById('select-job-position').value
+    if (choice == 0) {
+        document.getElementById('ratePerHour').value = null
+    }
+
+    else if (choice == "System Administrator") {
+        document.getElementById('ratePerHour').value = 300
+    }
+
+    else if (choice == "Database Administrator") {
+        document.getElementById('ratePerHour').value = 280
+    }
+
+    else if (choice == "Senior Developer") {
+        document.getElementById('ratePerHour').value = 240
+    }
+
+    else if (choice == "Junior Developer") {
+        document.getElementById('ratePerHour').value = 200
+    }
+}
