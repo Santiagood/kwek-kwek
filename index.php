@@ -274,7 +274,7 @@
                                 <div class="row">
                                     <div class="col" id="job-position">
                                         <label for="select-job-position" class="form-label">Job Position</label>
-                                        <select name="select-job-position" class="form-select" id="select-job-position" onchange="PositionToRate()">
+                                        <select name="select-job-position" class="form-select" id="select-job-position" onchange="PositionToRate()" required>
                                             <option value="0" selected>Job Position: </option>
                                             <option value="System Administrator">System Administrator</option>
                                             <option value="Database Administrator">Database Administrator</option>
@@ -285,7 +285,7 @@
                                     <div class="col" id="employee-id">
                                         <label for="employeeID" class="form-label">Employee ID</label>
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control" id="employeeID" name="employeeID" placeholder="Employee ID: ">
+                                            <input type="text" class="form-control" id="employeeID" name="employeeID" placeholder="Employee ID: " required>
                                             <span class="input-group-text">@ IT-205</span>
                                         </div>
                                     </div>
@@ -295,12 +295,12 @@
                                 <div class="row">
                                     <div class="col" id="employee-name">
                                         <label for="employeeName" class="form-label">Employee Name</label>
-                                        <input type="text" class="form-control" id="employeeName" name="employeeName" placeholder="Lastname, Firstname, Mi : ">
+                                        <input type="text" class="form-control" id="employeeName" name="employeeName" placeholder="Lastname, Firstname, Mi : " required>
                                     </div>
                                     <div class="col" id="employee-age">
                                         <label for="employeeAge" class="form-label">Employee Age</label>
                                         <div class="input-group mb-3">
-                                            <input type="number" class="form-control" id="employeeAge" name="employeeAge" placeholder="Age: ">
+                                            <input type="number" class="form-control" id="employeeAge" name="employeeAge" placeholder="Age: " required>
                                             <span class="input-group-text">years old</span>
                                         </div>
                                     </div>
@@ -312,7 +312,7 @@
                                         <label for="yearEmployeed" class="form-label">Year Employeed</label>
                                         <div class="input-group mb-3">
                                             <span class="input-group-text">Year</span>
-                                            <input type="text" class="form-control" id="year-employeed-show" name="year-employeed-show" value="" placeholder="Year Started" readonly>
+                                            <input type="text" class="form-control" id="year-employeed-show" name="year-employeed-show" value="" placeholder="Year Started" required readonly>
                                             <input type="range" class="form-range" min="2010" name="yearEmployeed" max="2021" id="yearEmployeed" oninput="sliderShowYear()">
                                         </div>
                                     </div>
@@ -320,7 +320,7 @@
                                         <label for="contractUntil" class="form-label">Contract Until</label>
                                         <div class="input-group mb-3">
                                             <span class="input-group-text">Year</span>
-                                            <input type="text" class="form-control" id="contractUntil" name="contractUntil" value="" placeholder="Year Ended" readonly>
+                                            <input type="text" class="form-control" id="contractUntil" name="contractUntil" value="" placeholder="Year Ended" required readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -330,13 +330,13 @@
                                     <div class="col" id="rate-per-hour">
                                         <label for="ratePerHour" class="form-label">Rate Per Hour</label>
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control" id="ratePerHour" name="ratePerHour" value="" placeholder="Rate Per Hour" readonly>
+                                            <input type="text" class="form-control" id="ratePerHour" name="ratePerHour" value="" placeholder="Rate Per Hour" required readonly>
                                         </div>
                                     </div>
                                     <div class="col" id="hours-per-day">
                                         <label for="yearEmployeed" class="form-label">Number Of Hours a Day</label>
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control" id="numberOfHoursADay" name="numberOfHoursADay" value="" placeholder="Worked for: " disabled>
+                                            <input type="text" class="form-control" id="numberOfHoursADay" name="numberOfHoursADay" value="" placeholder="Worked for: " required disabled>
                                             <span class="input-group-text">Hours a day</span>
                                             <input type="range" class="form-range" min="6" name="sliderHours" max="12" id="sliderHours" oninput="sliderShowHours()">
                                         </div>
