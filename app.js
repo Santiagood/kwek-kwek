@@ -121,74 +121,167 @@ function speedChoice() {
 }
 
 
+function VolumeChoice() {
+    let choice = document.getElementById('volumechoice').value
 
-
-/*
-function speedChoiceFrom() {
-    let choice = document.getElementById('convertspeedselectFrom').value
-    
     if (choice == 1) {
-        console.log("Miles Per Hour")
-        document.getElementById('FromSpeedForm').placeholder="Enter value: "
-        document.getElementById('FromSpeedForm').name = "From_MilesPerHour"
+        console.log("Cylinder")
+        document.getElementById('CylinderDiv').style.display = "block"
+        document.getElementById('SphereDiv').style.display = "none"
+        document.getElementById('ConeDiv').style.display = "none"
+        document.getElementById('CubeDiv').style.display = "none"
+        document.getElementById('PrismDiv').style.display = "none"
+        document.getElementById('TriangularPrismDiv').style.display = "none"
+
+        document.getElementById('Cylinder-Radius').name = "Cylinder-Radius"
+        document.getElementById('Cylinder-Height').name = "Cylinder-Height"
+        document.getElementById('Sphere-Radius').name = ""
+        document.getElementById('Cone-Radius').name = ""
+        document.getElementById('Cone-Height').name = ""
+        document.getElementById('Cube-Edge').name = ""
+        document.getElementById('Prism-Base').name = ""
+        document.getElementById('Prism-Height').name = ""
+        document.getElementById('TriangularPrism-a-Base').name = ""
+        document.getElementById('TriangularPrism-b-Base').name = ""
+        document.getElementById('TriangularPrism-c-Base').name = ""
+        document.getElementById('TriangularPrism-Height').name = ""
     }
 
     else if (choice == 2) {
-        console.log("Foot Per Second")
-        document.getElementById('FromSpeedForm').placeholder="Enter value: "
-        document.getElementById('FromSpeedForm').name = "From_FootPerSecond"
+        console.log("Sphere")
+        document.getElementById('CylinderDiv').style.display = "none"
+        document.getElementById('SphereDiv').style.display = "block"
+        document.getElementById('ConeDiv').style.display = "none"
+        document.getElementById('CubeDiv').style.display = "none"
+        document.getElementById('PrismDiv').style.display = "none"
+        document.getElementById('TriangularPrismDiv').style.display = "none"
+        
+        document.getElementById('Cylinder-Radius').name = ""
+        document.getElementById('Cylinder-Height').name = ""
+        document.getElementById('Sphere-Radius').name = "Sphere-Radius"
+        document.getElementById('Cone-Radius').name = ""
+        document.getElementById('Cone-Height').name = ""
+        document.getElementById('Cube-Edge').name = ""
+        document.getElementById('Prism-Base').name = ""
+        document.getElementById('Prism-Height').name = ""
+        document.getElementById('TriangularPrism-a-Base').name = ""
+        document.getElementById('TriangularPrism-b-Base').name = ""
+        document.getElementById('TriangularPrism-c-Base').name = ""
+        document.getElementById('TriangularPrism-Height').name = ""
     }
 
     else if (choice == 3) {
-        console.log("Meter Per Second")
-        document.getElementById('FromSpeedForm').placeholder="Enter value: "
-        document.getElementById('FromSpeedForm').name = "From_MeterPerSecond"
+        console.log("Cone")
+        document.getElementById('CylinderDiv').style.display = "none"
+        document.getElementById('SphereDiv').style.display = "none"
+        document.getElementById('ConeDiv').style.display = "block"
+        document.getElementById('CubeDiv').style.display = "none"
+        document.getElementById('PrismDiv').style.display = "none"
+        document.getElementById('TriangularPrismDiv').style.display = "none"
+        
+        document.getElementById('Cylinder-Radius').name = ""
+        document.getElementById('Cylinder-Height').name = ""
+        document.getElementById('Sphere-Radius').name = ""
+        document.getElementById('Cone-Radius').name = "Cone-Radius"
+        document.getElementById('Cone-Height').name = "Cone-Height"
+        document.getElementById('Cube-Edge').name = ""
+        document.getElementById('Prism-Base').name = ""
+        document.getElementById('Prism-Height').name = ""
+        document.getElementById('TriangularPrism-a-Base').name = ""
+        document.getElementById('TriangularPrism-b-Base').name = ""
+        document.getElementById('TriangularPrism-c-Base').name = ""
+        document.getElementById('TriangularPrism-Height').name = ""
     }
 
     else if (choice == 4) {
-        console.log("Kilometer Per Hour")
-        document.getElementById('FromSpeedForm').placeholder="Enter value: "
-        document.getElementById('FromSpeedForm').name = "From_KilometerPerHour"
+        console.log("Cube")
+        document.getElementById('CylinderDiv').style.display = "none"
+        document.getElementById('SphereDiv').style.display = "none"
+        document.getElementById('ConeDiv').style.display = "none"
+        document.getElementById('CubeDiv').style.display = "block"
+        document.getElementById('PrismDiv').style.display = "none"
+        document.getElementById('TriangularPrismDiv').style.display = "none"
+        
+        document.getElementById('Cylinder-Radius').name = ""
+        document.getElementById('Cylinder-Height').name = ""
+        document.getElementById('Sphere-Radius').name = ""
+        document.getElementById('Cone-Radius').name = ""
+        document.getElementById('Cone-Height').name = ""
+        document.getElementById('Cube-Edge').name = "Cube-Edge"
+        document.getElementById('Prism-Base').name = ""
+        document.getElementById('Prism-Height').name = ""
+        document.getElementById('TriangularPrism-a-Base').name = ""
+        document.getElementById('TriangularPrism-b-Base').name = ""
+        document.getElementById('TriangularPrism-c-Base').name = ""
+        document.getElementById('TriangularPrism-Height').name = ""
     }
 
-    else {
-        console.log("Default")
-        document.getElementById('FromSpeedForm').name = ""
-        document.getElementById('FromSpeedForm').placeholder = ""
-    }
-}
-
-function speedChoiceTo() {
-    let choice = document.getElementById('convertspeedselectTo').value
-    
-    if (choice == 5) {
-        console.log("Miles Per Hour2")
-        document.getElementById('ToSpeedForm').placeholder="Enter value: "
-        document.getElementById('ToSpeedForm').name = "To_MilesPerHour"
+    else if (choice == 5) {
+        console.log("Prism")
+        document.getElementById('CylinderDiv').style.display = "none"
+        document.getElementById('SphereDiv').style.display = "none"
+        document.getElementById('ConeDiv').style.display = "none"
+        document.getElementById('CubeDiv').style.display = "none"
+        document.getElementById('PrismDiv').style.display = "block"
+        document.getElementById('TriangularPrismDiv').style.display = "none"
+        
+        document.getElementById('Cylinder-Radius').name = ""
+        document.getElementById('Cylinder-Height').name = ""
+        document.getElementById('Sphere-Radius').name = ""
+        document.getElementById('Cone-Radius').name = ""
+        document.getElementById('Cone-Height').name = ""
+        document.getElementById('Cube-Edge').name = ""
+        document.getElementById('Prism-Base').name = "Prism-Base"
+        document.getElementById('Prism-Height').name = "Prism-Height"
+        document.getElementById('TriangularPrism-a-Base').name = ""
+        document.getElementById('TriangularPrism-b-Base').name = ""
+        document.getElementById('TriangularPrism-c-Base').name = ""
+        document.getElementById('TriangularPrism-Height').name = ""
     }
 
     else if (choice == 6) {
-        console.log("Foot Per Second2")
-        document.getElementById('ToSpeedForm').placeholder="Enter value: "
-        document.getElementById('ToSpeedForm').name = "To_FootPerSecond"
+        console.log("Triangular Prism")
+        document.getElementById('CylinderDiv').style.display = "none"
+        document.getElementById('SphereDiv').style.display = "none"
+        document.getElementById('ConeDiv').style.display = "none"
+        document.getElementById('CubeDiv').style.display = "none"
+        document.getElementById('PrismDiv').style.display = "none"
+        document.getElementById('TriangularPrismDiv').style.display = "block"
+        
+        document.getElementById('Cylinder-Radius').name = ""
+        document.getElementById('Cylinder-Height').name = ""
+        document.getElementById('Sphere-Radius').name = ""
+        document.getElementById('Cone-Radius').name = ""
+        document.getElementById('Cone-Height').name = ""
+        document.getElementById('Cube-Edge').name = ""
+        document.getElementById('Prism-Base').name = ""
+        document.getElementById('Prism-Height').name = ""
+        document.getElementById('TriangularPrism-a-Base').name = "TriangularPrism-a-Base"
+        document.getElementById('TriangularPrism-b-Base').name = "TriangularPrism-b-Base"
+        document.getElementById('TriangularPrism-c-Base').name = "TriangularPrism-c-Base"
+        document.getElementById('TriangularPrism-Height').name = "TriangularPrism-Height"
     }
 
-    else if (choice == 7) {
-        console.log("Meter Per Second2")
-        document.getElementById('ToSpeedForm').placeholder="Enter value: "
-        document.getElementById('ToSpeedForm').name = "To_MeterPerSecond"
-    }
-
-    else if (choice == 8) {
-        console.log("Kilometer Per Hour2")
-        document.getElementById('ToSpeedForm').placeholder="Enter value: "
-        document.getElementById('ToSpeedForm').name = "To_KilometerPerHour"
-    }
-
-    else {
-        console.log("Default")
-        document.getElementById('ToSpeedForm').name = ""
-        document.getElementById('ToSpeedForm').placeholder = ""
+    else if (choice == 0) {
+        console.log("back to no view at all")
+        document.getElementById('CylinderDiv').style.display = "none"
+        document.getElementById('SphereDiv').style.display = "none"
+        document.getElementById('ConeDiv').style.display = "none"
+        document.getElementById('CubeDiv').style.display = "none"
+        document.getElementById('PrismDiv').style.display = "none"
+        document.getElementById('TriangularPrismDiv').style.display = "none"
+        
+        document.getElementById('Cylinder-Radius').name = ""
+        document.getElementById('Cylinder-Height').name = ""
+        document.getElementById('Sphere-Radius').name = ""
+        document.getElementById('Cone-Radius').name = ""
+        document.getElementById('Cone-Height').name = ""
+        document.getElementById('Cube-Edge').name = ""
+        document.getElementById('Prism-Base').name = ""
+        document.getElementById('Prism-Height').name = ""
+        document.getElementById('TriangularPrism-a-Base').name = ""
+        document.getElementById('TriangularPrism-b-Base').name = ""
+        document.getElementById('TriangularPrism-c-Base').name = ""
+        document.getElementById('TriangularPrism-Height').name = ""
     }
 }
-*/
