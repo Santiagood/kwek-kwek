@@ -299,18 +299,18 @@ function PositionToRate() {
     }
 
     else if (choice == "System Administrator") {
-        document.getElementById('ratePerHour').value = 300
+        document.getElementById('ratePerHour').value = parseInt("900")
     }
 
     else if (choice == "Database Administrator") {
-        document.getElementById('ratePerHour').value = 280
+        document.getElementById('ratePerHour').value = parseInt("850")
     }
 
     else if (choice == "Senior Developer") {
-        document.getElementById('ratePerHour').value = 240
+        document.getElementById('ratePerHour').value = parseInt("820")
     }
 
     else if (choice == "Junior Developer") {
-        document.getElementById('ratePerHour').value = 200
+        document.getElementById('ratePerHour').value = parseInt("700")
     }
 }

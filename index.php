@@ -487,12 +487,12 @@
                                 }
 
                                 $gross = $rateperhour * $hoursperday;
-                                $philhealth = $gross * 0.02;
-                                $pagibig = $gross * 0.03;
-                                $sss = $gross * 0.03;
+                                $philhealth = $gross * 0.2;
+                                $pagibig = $gross * 0.3;
+                                $sss = $gross * 0.3;
                                 $tax = $gross * 0.10;
                                 $totaldeduction = $philhealth + $pagibig + $sss + $tax;
-                                $netsalary = $gross - $totaldeduction;
+                                $netsalary = ($gross - $totaldeduction) * 30;
                             ?>
                             
                             <div class="container">

@@ -298,7 +298,7 @@
     }
     
     function outputGross($gross) {
-        echo "<input type='text' class='form-control' id='output-gross-salary' value='" . $gross . "' disabled>";
+        echo "<input type='text' class='form-control' id='output-gross-salary' value='" . $gross . "' readonly>";
     }
 
     function outputPhilhealth($philhealth) {
@@ -326,6 +326,6 @@
     }
 
     function outputContractUntil($contractuntil) {
-        echo "<input type='text' class='form-control' id='output-net-salary' value='" . $contractuntil . "' disabled>";
+        echo "<input type='text' class='form-control' id='output-position' value='" . $contractuntil . "' disabled>";
     }
 ?>
