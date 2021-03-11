@@ -336,7 +336,7 @@
                                     <div class="col" id="hours-per-day">
                                         <label for="yearEmployeed" class="form-label">Number Of Hours a Day</label>
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control" id="numberOfHoursADay" name="numberOfHoursADay" value="" placeholder="Worked for: " required disabled>
+                                            <input type="text" class="form-control" id="numberOfHoursADay" name="numberOfHoursADay" value="" placeholder="Worked for: " required readonly>
                                             <span class="input-group-text">Hours a day</span>
                                             <input type="range" class="form-range" min="6" name="sliderHours" max="12" id="sliderHours" oninput="sliderShowHours()">
                                         </div>

@@ -282,19 +282,19 @@
     //Payroll
 
     function outputJob($position) {
-        echo "<input type='text' class='form-control' id='output-position' value='" . $position . "' disabled>";
+        echo "<input type='text' class='form-control' id='output-position' value='" . $position . "' readonly>";
     }
 
     function outputName($name) {
-        echo "<input type='text' class='form-control' id='output-name' value='" . $name . "' disabled>";
+        echo "<input type='text' class='form-control' id='output-name' value='" . $name . "' readonly>";
     }
 
     function outputAge($age) {
-        echo "<input type='text' class='form-control' id='output-age' value='" . $age . "' disabled>";
+        echo "<input type='text' class='form-control' id='output-age' value='" . $age . "' readonly>";
     }
 
     function outputID($id) {
-        echo "<input type='text' class='form-control' id='output-ID' value='" . $id ." @ IT-205". "' disabled>";
+        echo "<input type='text' class='form-control' id='output-ID' value='" . $id ." @ IT-205". "' readonly>";
     }
     
     function outputGross($gross) {
@@ -302,30 +302,30 @@
     }
 
     function outputPhilhealth($philhealth) {
-        echo "<input type='text' class='form-control' id='output-philhealth' value='" . $philhealth . "' disabled>";
+        echo "<input type='text' class='form-control' id='output-philhealth' value='" . $philhealth . "' readonly>";
     }
 
     function outputPagibig($pagibig) {
-        echo "<input type='text' class='form-control' id='output-pagibig' value='" . $pagibig . "' disabled>";
+        echo "<input type='text' class='form-control' id='output-pagibig' value='" . $pagibig . "' readonly>";
     }
 
     function outputSSS($sss) {
-        echo "<input type='text' class='form-control' id='output-sss' value='" . $sss . "' disabled>";
+        echo "<input type='text' class='form-control' id='output-sss' value='" . $sss . "' readonly>";
     }
 
     function outputTax($tax) {
-        echo "<input type='text' class='form-control' id='output-tax' value='" . $tax . "' disabled>";
+        echo "<input type='text' class='form-control' id='output-tax' value='" . $tax . "' readonly>";
     }
 
     function outputTotalDeduction($totaldeduction) {
-        echo "<input type='text' class='form-control' id='output-total-deduction' value='" . $totaldeduction . "' disabled>";
+        echo "<input type='text' class='form-control' id='output-total-deduction' value='" . $totaldeduction . "' readonly>";
     }
 
     function outputSalary($netsalary) {
-        echo "<input type='text' class='form-control' id='output-net-salary' value='" . $netsalary . "' disabled>";
+        echo "<input type='text' class='form-control' id='output-net-salary' value='" . $netsalary . "' readonly>";
     }
 
     function outputContractUntil($contractuntil) {
-        echo "<input type='text' class='form-control' id='output-position' value='" . $contractuntil . "' disabled>";
+        echo "<input type='text' class='form-control' id='output-position' value='" . $contractuntil . "' readonly>";
     }
 ?>
